@@ -1,0 +1,25 @@
+Test framework
+
+ETE/Behaviour Driven Development
+
+https://scotch.io/tutorials/testing-angular-with-jasmine-and-karma-part-1 refernce link
+
+The Angular CLI downloads and install everything you need to test an Angular application with the Jasmine test framework.
+
+Jasmine is a behavior-driven development framework for testing JavaScript code. It does not depend on any other JavaScript frameworks. It does not require a DOM. And it has a clean, obvious syntax so that you can easily write test
+Jasmine tests itself across many browsers (Safari, Chrome, Firefox, PhantomJS, Microsoft Edge, and new Internet Explorer) as well as nodejs
+
+The ng test command builds the app in watch mode, and launches the Karma test runner.
+
+The last line of the log is the most important. It shows that Karma ran three tests that all passed.
+
+A chrome browser also opens and displays the test output in the "Jasmine HTML Reporter" like this.
+
+To see this in action, make a small change to app.component.ts and save. The tests run again, the browser refreshes, and the new test results appear.
+
+Configuration
+The CLI takes care of Jasmine and Karma configuration for you.
+
+You can fine-tune many options by editing the karma.conf.js and the test.ts files in the src/ folder.
+
+The karma.conf.js file is a partial Karma configuration file. The CLI constructs the full runtime configuration in memory, based on application structure specified in the angular.json file, supplemented by karma.conf.js.

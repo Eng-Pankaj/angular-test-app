@@ -1,0 +1,80 @@
+Set up continuous integration
+One of the best ways to keep your project bug free is through a test suite, but it's easy to forget to run tests all the time. Continuous integration (CI) servers let you set up your project repository so that your tests run on every commit and pull request.
+
+There are paid CI services like Circle CI and Travis CI, and you can also host your own for free using Jenkins and others. Although Circle CI and Travis CI are paid services, they are provided free for open source projects. You can create a public project on GitHub and add these services without paying. Contributions to the Angular repo are automatically run through a whole suite of Circle CI tests.
+
+This article explains how to configure your project to run Circle CI and Travis CI, and also update your test configuration to be able to run tests in the Chrome browser in either environment.
+
+CircleCI is recommended for small projects, where the main goal is to start the integration as fast as possible.
+
+Travis CI is recommended for cases when you are working on the open-source projects, that should be tested in different environments.
+
+Jenkins is recommended for the big projects, where you need a lot of customizations that can be done by usage of various plugins. You may change almost everything here, still this process may take a while. If you are planning the quickest start with the CI system Jenkins might not be your choice.
+
+Features:
+
+Jenkins is a self-contained Java-based program, ready to run out-of-the-box, with packages for Windows, Mac OS X and other Unix-like operating systems
+With hundreds of plugins in the Update Center, Jenkins integrates with practically every tool in the continuous integration and continuous delivery toolchain
+Jenkins can be extended via its plugin architecture, providing nearly infinite possibilities for what Jenkins can do
+Various job modes: Freestyle project, Pipeline, External Job, Multi-configuration project, Folder, GitHub Organization, Multibranch Pipeline
+Jenkins Pipeline. That’s a suite of plugins which supports implementing and integrating continuous delivery pipelines into Jenkins. Pipeline provides an extensible set of tools for modeling simple-to-complex delivery pipelines “as code” via the Pipeline DSL
+Allows you to launch builds with various conditions.
+You can run Jenkins with Libvirt, Kubernetes, Docker, and others.
+Rest API — have access to Controlling the amount of data you fetch, Fetch/Update config.xml, Delete a job, Retrieving all builds, Fetch/Update job description, Perform a build, Disable/Enable a job
+
+Jenkins Pros:
+
+Price (it’s free)
+Customization
+Plugins system
+Full control of the system
+
+Jenkins Cons:
+
+Dedicated server (or several servers) are required. That results in additional expenses. For the server itself, DevOps, etc…
+Time needed for configuration / customization
+Co
+
+Link:- https://hackernoon.com/continuous-integration-circleci-vs-travis-ci-vs-jenkins-41a1c2bd95f5
+
+
+
+The Ultimate CI Tool and Its Importance in the CI/CD Pipeline
+Our task is to automate the entire process, from the time the development team gives us the code and commits it to the time we get it into production. We will automate the pipeline in order to make the entire software development lifecycle in DevOps/automated mode. For this, we will need automation tools.
+
+Jenkins provides us with various interfaces and tools in order to automate the entire process.
+
+We have a Git repository where the development team will commit the code. Then, Jenkins takes over from there, a front-end tool where you can define your entire job or the task. Our job is to ensure the continuous integration and delivery process for that particular tool or for the particular application.
+
+From Git, Jenkins pulls the code and then Jenkins moves it into the commit phase, where the code is committed from every branch. The build phase is where we compile the code. which can be deployed to run a series of tests. These test cases are overseen by Jenkins again.
+
+
+
+Jenkins CI is one of the most popular continuous integration servers in the market today. At some point while developing your AngularJS project (hopefully early on), you might want to have automated tests run off your code versioning system. Jenkins will help you with this task. You can integrate Karma to your Jenkins setup fairly easy
+
+
+
+
+Below are the steps which i have followed to setup continuous integration.
+
+Install Prerequisites
+	Node
+	Karma
+
+Configure Karma
+	And most CI servers use Linux, which means:
+	■ No Google Chrome available
+	■ No UI to launch a browser
+ 
+   Tests can be run with a UI-less browser
+   Karma config file entry for any of them:-
+  
+	Chrome Headless 
+	Phantom JS
+	
+Create a new Jenkins Job
+
+
+Configure the Build Environment
+
+You might need different builds (QA, prod, test, dev) this can be configurable
